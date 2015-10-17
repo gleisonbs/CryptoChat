@@ -9,6 +9,7 @@ constexpr int AES_KEYLEN = 256;
 class Crypto {
 public:
 	Crypto();
+	~Crypto();
 	std::string aes_encrypt(std::string);
 	std::string aes_decrypt(std::string);
 private:

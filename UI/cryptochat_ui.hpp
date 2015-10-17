@@ -16,6 +16,7 @@ public slots:
 	void encrypt();
 	void decrypt();
 private:
+	Crypto cryp;
 	QGridLayout *main_layout;
 	QComboBox *cmb_enc_dec;
 	QTextEdit *in_text_edit;

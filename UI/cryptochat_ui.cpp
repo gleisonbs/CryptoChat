@@ -48,12 +48,12 @@ void CryptoChat::switch_enc_dec(int index) {
 
 void CryptoChat::encrypt() {
 	cout << "ENCRYPT" << endl;
-	Crypto c;
 	string msg = in_text_edit->toPlainText().toStdString();
-	out_text_edit->setText(QString::fromStdString(c.aes_encrypt(msg)));
+	out_text_edit->setText(QString::fromStdString(cryp.aes_encrypt(msg)));
 }
 
 void CryptoChat::decrypt() {
 	cout << "DECRYPT" << endl;
-	Crypto c;
+	string msg = in_text_edit->toPlainText().toStdString();
+	out_text_edit->setText(QString::fromStdString(cryp.aes_decrypt(msg)));
 }
